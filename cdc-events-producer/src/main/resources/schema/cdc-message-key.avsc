@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "KeyRecord",
+  "fields": [
+    {
+      "name": "id",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}

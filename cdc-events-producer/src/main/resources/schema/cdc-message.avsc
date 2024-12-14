@@ -1,0 +1,128 @@
+{
+  "type": "record",
+  "name": "KafkaMessage",
+  "fields": [
+    {
+      "name": "before",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "after",
+      "type": ["null", {
+        "type": "record",
+        "name": "AfterRecord",
+        "fields": [
+          {
+            "name": "key",
+            "type": ["null", "string"],
+            "default": null
+          },
+          {
+            "name": "value",
+            "type": ["null", {
+              "type": "record",
+              "name": "ValueRecord",
+              "fields": [
+                {
+                  "name": "type",
+                  "type": ["null", "int"],
+                  "default": null
+                },
+                {
+                  "name": "object",
+                  "type": ["null", {
+                    "type": "record",
+                    "name": "ObjectRecord",
+                    "fields": [
+                      {
+                        "name": "id",
+                        "type": ["null", "string"],
+                        "default": null
+                      },
+                      {
+                        "name": "host",
+                        "type": ["null", "string"],
+                        "default": null
+                      },
+                      {
+                        "name": "name",
+                        "type": ["null", "string"],
+                        "default": null
+                      },
+                      {
+                        "name": "path",
+                        "type": ["null", "string"],
+                        "default": null
+                      },
+                      {
+                        "name": "port",
+                        "type": ["null", "int"],
+                        "default": null
+                      },
+                      {
+                        "name": "tags",
+                        "type": ["null", {"type": "array", "items": "string"}],
+                        "default": null
+                      },
+                      {
+                        "name": "enabled",
+                        "type": ["null", "boolean"],
+                        "default": null
+                      },
+                      {
+                        "name": "retries",
+                        "type": ["null", "int"],
+                        "default": null
+                      },
+                      {
+                        "name": "protocol",
+                        "type": ["null", "string"],
+                        "default": null
+                      },
+                      {
+                        "name": "created_at",
+                        "type": ["null", "long"],
+                        "default": null
+                      },
+                      {
+                        "name": "updated_at",
+                        "type": ["null", "long"],
+                        "default": null
+                      },
+                      {
+                        "name": "read_timeout",
+                        "type": ["null", "long"],
+                        "default": null
+                      },
+                      {
+                        "name": "write_timeout",
+                        "type": ["null", "long"],
+                        "default": null
+                      },
+                      {
+                        "name": "connect_timeout",
+                        "type": ["null", "long"],
+                        "default": null
+                      }
+                    ]
+                  }]
+                }]
+              }]
+            }]
+          }]
+        }]
+      }]
+    },
+    {
+      "name": "op",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "ts_ms",
+      "type": ["null", "long"],
+      "default": null
+    }
+  ]
+}

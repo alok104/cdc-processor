@@ -1,0 +1,12 @@
+{
+  "namespace": "com.cdc.avro",
+  "type": "record",
+  "name": "CDCEventMessageKey",
+  "fields": [
+    {
+      "name": "id",
+      "type": ["null", "string"],
+      "default": null
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "namespace": "com.cdc.avro",
+  "type": "record",
+  "name": "CDCEventMessage",
+  "fields": [
+    {
+      "name": "before",
+      "type": ["null", "string"]
+    },
+    {
+      "name": "after",
+      "type": {
+        "type": "record",
+        "name": "After",
+        "fields": [
+          {
+            "name": "key",
+            "type": "string"
+          },
+          {
+            "name": "value",
+            "type": {
+              "type": "record",
+              "name": "Value",
+              "fields": [
+                {
+                  "name": "object",
+                  "type": {
+                    "type": "record",
+                    "name": "Object",
+                    "fields": [
+                      {
+                        "name": "id",
+                        "type": "string"
+                      },
+                      {
+                        "name": "host",
+                        "type": "string"
+                      },
+                      {
+                        "name": "name",
+                        "type": "string"
+                      },
+                      {
+                        "name": "path",
+                        "type": "string"
+                      },
+                      {
+                        "name": "port",
+                        "type": "int"
+                      },
+                      {
+                        "name": "tags",
+                        "type": {
+                          "type": "array",
+                          "items": "string"
+                        }
+                      },
+                      {
+                        "name": "enabled",
+                        "type": "boolean"
+                      },
+                      {
+                        "name": "retries",
+                        "type": "int"
+                      },
+                      {
+                        "name": "protocol",
+                        "type": "string"
+                      },
+                      {
+                        "name": "created_at",
+                        "type": "long"
+                      },
+                      {
+                        "name": "updated_at",
+                        "type": "long"
+                      },
+                      {
+                        "name": "read_timeout",
+                        "type": "int"
+                      },
+                      {
+                        "name": "write_timeout",
+                        "type": "int"
+                      },
+                      {
+                        "name": "connect_timeout",
+                        "type": "int"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "op",
+      "type": "string"
+    },
+    {
+      "name": "ts_ms",
+      "type": "long"
+    }
+  ]
+}
+ 
+  
